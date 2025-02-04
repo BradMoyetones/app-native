@@ -147,3 +147,27 @@ export const musicCategories = [
     img: "https://cdn.pixabay.com/photo/2019/12/16/10/49/building-4699096_640.jpg",
   },
 ];
+
+export const plans = [
+  {
+    id: "free",
+    name: "Free Plan",
+    price: "Free",
+    features: ["Limited skips", "Ads included", "Standard audio quality"],
+    bgColor: "rgba(100, 116, 139, 0.7)", // Gris
+  },
+  {
+    id: "premium",
+    name: "Premium Plan",
+    price: "$9.99/month",
+    features: ["Unlimited skips", "No ads", "High-quality audio", "Offline mode"],
+    bgColor: "rgba(34, 197, 94, 0.7)", // Verde
+  },
+  {
+    id: "family",
+    name: "Family Plan",
+    price: "$14.99/month",
+    features: ["Up to 6 accounts", "No ads", "High-quality audio", "Offline mode"],
+    bgColor: "rgba(234, 88, 12, 0.7)", // Naranja
+  },
+];

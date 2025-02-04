@@ -10,7 +10,7 @@ import React, { useLayoutEffect, useState } from "react";
 import { useNavigation, router } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { musics } from "@/assets/data/meals";
+import { plans } from "@/assets/data/meals";
 import CustomButton from "@/components/CustomButton";
 import { useColorScheme } from "nativewind";
 
@@ -51,18 +51,24 @@ const cart = () => {
     <SafeAreaView className="flex-1 bg-white dark:bg-zinc-950" edges={["bottom"]}>
       <FlatList
         className="h-full"
-        data={musics}
+        data={plans}
         keyExtractor={(item, index) => `${item}-${index}`}
         ItemSeparatorComponent={() => (
           <View className="h-[1px] bg-muted-foreground dark:bg-dark-muted-foreground"></View>
         )}
         renderItem={({ item, index }) => (
           <View className="p-4 px-6">
-            <View className="flex-row items-start gap-4 bg-zinc-200 dark:bg-zinc-800">
-              <Image
-                source={{ uri: item.image }}
-                className="h-[60px] w-[60px] rounded-xl"
-              />
+            <View className="p-6 rounded-xl" style={{ backgroundColor: item.bgColor }}>
+              <Text className="text-lg font-bold text-white">{item.name}</Text>
+              <Text className="text-md font-semibold text-white mt-1">{item.price}</Text>
+              <View className="mt-2">
+                {item.features.map((feature, index) => (
+                  <Text key={index} className="text-white text-sm">• {feature}</Text>
+                ))}
+              </View>
+              <TouchableOpacity className="mt-4 bg-white rounded-full py-2 px-4" onPress={() => router.push("/checkout")}>
+                <Text className="text-center font-bold text-black">Select Plan</Text>
+              </TouchableOpacity>
             </View>
           </View>
         )}
@@ -72,15 +78,6 @@ const cart = () => {
           </>
         )}
       />
-
-      <View className="absolute bottom-0 right-0 left-0 px-6 bg-white dark:bg-zinc-950 py-2 pb-6">
-        <CustomButton
-          extraBtnClass="bg-app-600 shadow-xl shadow-app-600"
-          extraTxtClass="text-white"
-          label="Checkout"
-          handlePress={() => router.push("/checkout")}
-        />
-      </View>
     </SafeAreaView>
   );
 };
