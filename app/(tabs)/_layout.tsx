@@ -89,8 +89,9 @@ const TabsLayout = () => {
         />
 
         <Tabs.Screen
-          name="plans"
+          name="plansold"
           options={{
+            href: "/plans",
             title: "",
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
@@ -130,8 +131,9 @@ const TabsLayout = () => {
         />
 
         <Tabs.Screen
-          name="profile"
+          name="profileold"
           options={{
+            href: "/profile",
             headerTitle: "My Profile",
             headerShadowVisible: false,
             headerTitleStyle: {
@@ -150,6 +152,7 @@ const TabsLayout = () => {
                 color={color}
               />
             ),
+            
           }}
           listeners={() => {
             return {
@@ -159,6 +162,7 @@ const TabsLayout = () => {
               },
             };
           }}
+          redirect={false}
         />
       </Tabs>
 

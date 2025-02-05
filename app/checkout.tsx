@@ -1,5 +1,4 @@
 import CustomInput from "@/components/CustomInput";
-import { Colors } from "@/constants/Colors";
 import { Ionicons } from "@expo/vector-icons";
 import { router, useNavigation } from "expo-router";
 import React, { useRef, useState, useEffect } from "react";
@@ -133,14 +132,14 @@ const Checkout = () => {
             <View className="space-x-2">
               <BouncyCheckbox
                 size={20}
-                fillColor={Colors.primary}
+                fillColor={""}
                 unFillColor="#FFFFFF"
                 textComponent={
                   <Text className="font-rbmedium text-[15px] ml-2">
                     Save shipping address
                   </Text>
                 }
-                iconStyle={{ borderColor: Colors.primary, borderRadius: 4 }}
+                iconStyle={{ borderColor: "", borderRadius: 4 }}
                 innerIconStyle={{ borderWidth: 2, borderRadius: 4 }}
                 isChecked={true}
                 onPress={(isChecked: boolean) => {
@@ -154,7 +153,7 @@ const Checkout = () => {
           <View className="flex-1 bg-white pb-32">
             <View className="mb-5 flex-row justify-between gap-2 items-center">
               <TouchableOpacity className="items-center justify-center p-4 border border-grey1 rounded-xl w-[30%]">
-                <Ionicons name="cash" size={28} color={Colors.grey4} />
+                <Ionicons name="cash" size={28} color={""} />
                 <Text className="text-center pt-1 font-pregular">Cash On</Text>
                 <Text className="text-center font-pregular -top-1">
                   Delivery
@@ -162,13 +161,13 @@ const Checkout = () => {
               </TouchableOpacity>
 
               <TouchableOpacity className="items-center justify-center p-4 border border-primary rounded-xl w-[30%]">
-                <Ionicons name="card" size={28} color={Colors.primary} />
+                <Ionicons name="card" size={28} color={""} />
                 <Text className="text-center pt-1 font-pregular">Credit</Text>
                 <Text className="text-center font-pregular -top-1">Card</Text>
               </TouchableOpacity>
 
               <TouchableOpacity className="items-center justify-center p-4 border border-grey1 rounded-xl w-[30%]">
-                <Ionicons name="logo-paypal" size={28} color={Colors.grey4} />
+                <Ionicons name="logo-paypal" size={28} color={""} />
                 <Text className="text-center pt-1 font-pregular">Paypal</Text>
                 <Text className="text-center font-pregular -top-1">Method</Text>
               </TouchableOpacity>
@@ -206,14 +205,14 @@ const Checkout = () => {
             <View className="space-x-2">
               <BouncyCheckbox
                 size={20}
-                fillColor={Colors.primary}
+                fillColor={""}
                 unFillColor="#FFFFFF"
                 textComponent={
                   <Text className="font-rbmedium text-[15px] ml-2">
                     Save this card
                   </Text>
                 }
-                iconStyle={{ borderColor: Colors.primary, borderRadius: 4 }}
+                iconStyle={{ borderColor: "", borderRadius: 4 }}
                 innerIconStyle={{ borderWidth: 2, borderRadius: 4 }}
                 isChecked={true}
                 onPress={(isChecked: boolean) => {

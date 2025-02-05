@@ -7,9 +7,6 @@ import {
 } from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { StatusBar } from "expo-status-bar";
-import { Ionicons } from "@expo/vector-icons";
-import { Colors } from "@/constants/Colors";
 import CustomInput from "@/components/CustomInput";
 import CustomButton from "@/components/CustomButton";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
@@ -69,7 +66,7 @@ const SignUp = () => {
               <BouncyCheckbox
                 style={{ alignItems: "flex-start" }}
                 size={20}
-                fillColor={Colors.primary}
+                fillColor={""}
                 unFillColor="#FFFFFF"
                 textComponent={
                   <View className="flex-row items-center flex-wrap">
@@ -92,7 +89,7 @@ const SignUp = () => {
                     </Link>
                   </View>
                 }
-                iconStyle={{ borderColor: Colors.primary, borderRadius: 4 }}
+                iconStyle={{ borderColor: "", borderRadius: 4 }}
                 innerIconStyle={{ borderWidth: 2, borderRadius: 4 }}
                 isChecked={true}
                 onPress={(isChecked: boolean) => {

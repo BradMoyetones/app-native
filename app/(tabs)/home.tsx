@@ -86,6 +86,7 @@ const Home = () => {
                   <Ionicons
                     name="chevron-forward"
                     size={24}
+                    color={colorScheme === "dark" ? "#9CA3AF" : "#6B7280"}
                   />
                 </Link>
               </View>
